@@ -98,7 +98,7 @@
                 <td>5<br>2️⃣</td>
                 <td>6<br>4️⃣</td>
                 <td>7<br>3️⃣</td>
-                <td>8<br>0️⃣</td>
+                <td>8<br>5️⃣</td>
                 <td>9<br>0️⃣</td>
                 <td>10<br>0️⃣</td>
                 <td>0개<br>⬜</td>
