@@ -72,15 +72,15 @@
 <div align=center>
     <p>
         <table>
-            <th width="50"></th>
-            <th width="50"style="color:rgb(255,50,0)">SUN</th>
-            <th width="50">MON</th>
-            <th width="50">TUE</th>
-            <th width="50">WED</th>
-            <th width="50">THU</th>
-            <th width="50">FRI</th>
-            <th width="50"style="color:rgb(0,50,255)">SAT</th>
-            <th width="50">주간</th>
+            <th width="100"></th>
+            <th width="80"style="color:rgb(255,50,0)">SUN</th>
+            <th width="80">MON</th>
+            <th width="80">TUE</th>
+            <th width="80">WED</th>
+            <th width="80">THU</th>
+            <th width="80">FRI</th>
+            <th width="80"style="color:rgb(0,50,255)">SAT</th>
+            <th width="100">주간</th>
             <tr align=center>
                 <td>날짜<br>문제</td>
                 <td>-<br>-</td>
@@ -97,7 +97,7 @@
                 <td>4<br>0️⃣</td>
                 <td>5<br>2️⃣</td>
                 <td>6<br>4️⃣</td>
-                <td>7<br>0️⃣</td>
+                <td>7<br>3️⃣</td>
                 <td>8<br>0️⃣</td>
                 <td>9<br>0️⃣</td>
                 <td>10<br>0️⃣</td>
@@ -148,15 +148,15 @@
 <div align=center>
     <p>
         <table>
-            <th width="50"></th>
-            <th width="50"style="color:rgb(255,50,0)">SUN</th>
-            <th width="50">MON</th>
-            <th width="50">TUE</th>
-            <th width="50">WED</th>
-            <th width="50">THU</th>
-            <th width="50">FRI</th>
-            <th width="50"style="color:rgb(0,50,255)">SAT</th>
-            <th width="50">주간</th>
+            <th width="100"></th>
+            <th width="80"style="color:rgb(255,50,0)">SUN</th>
+            <th width="80">MON</th>
+            <th width="80">TUE</th>
+            <th width="80">WED</th>
+            <th width="80">THU</th>
+            <th width="80">FRI</th>
+            <th width="80"style="color:rgb(0,50,255)">SAT</th>
+            <th width="100">주간</th>
             <tr align=center>
                 <td>날짜<br>문제</td>
                 <td>-<br>-</td>
@@ -235,15 +235,15 @@
 <div align=center>
     <p>
         <table>
-            <th width="50"></th>
-            <th width="50"style="color:rgb(255,50,0)">SUN</th>
-            <th width="50">MON</th>
-            <th width="50">TUE</th>
-            <th width="50">WED</th>
-            <th width="50">THU</th>
-            <th width="50">FRI</th>
-            <th width="50"style="color:rgb(0,50,255)">SAT</th>
-            <th width="50">주간</th>
+            <th width="100"></th>
+            <th width="80"style="color:rgb(255,50,0)">SUN</th>
+            <th width="80">MON</th>
+            <th width="80">TUE</th>
+            <th width="80">WED</th>
+            <th width="80">THU</th>
+            <th width="80">FRI</th>
+            <th width="80"style="color:rgb(0,50,255)">SAT</th>
+            <th width="100">주간</th>
             <tr align=center>
                 <td>날짜<br>문제</td>
                 <td>-<br>-</td>
