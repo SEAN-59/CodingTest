@@ -11,14 +11,20 @@
             <td>145,127위</td>
             <td>1041점</td>
             <td>24개</td>
+        </tr>
+        <tr align=center>
             <td>2024.02.11</td>
             <td>- 위</td>
             <td>- 점</td>
             <td>- 개</td>
+        </tr>
+        <tr align=center>
             <td>2024.02.18</td>
             <td>- 위</td>
             <td>- 점</td>
             <td>- 개</td>
+        </tr>
+        <tr align=center>
             <td>2024.02.25</td>
             <td>- 위</td>
             <td>- 점</td>
