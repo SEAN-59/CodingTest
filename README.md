@@ -14,9 +14,9 @@
         </tr>
         <tr align=center>
             <td>2024.02.11</td>
-            <td>- 위</td>
-            <td>- 점</td>
-            <td>- 개</td>
+            <td>104,175 위</td>
+            <td>1094 점</td>
+            <td>44 개</td>
         </tr>
         <tr align=center>
             <td>2024.02.18</td>
@@ -106,8 +106,8 @@
             <tr align=center>
                 <td>날짜<br>문제</td>
                 <td>11<br>5️⃣</td>
-                <td>12<br>0️⃣</td>
-                <td>13<br>0️⃣</td>
+                <td>12<br>2️⃣</td>
+                <td>13<br>1️⃣</td>
                 <td>14<br>0️⃣</td>
                 <td>15<br>0️⃣</td>
                 <td>16<br>0️⃣</td>
