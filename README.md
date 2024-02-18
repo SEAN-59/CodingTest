@@ -20,9 +20,9 @@
         </tr>
         <tr align=center>
             <td>2024.02.18</td>
-            <td>- 위</td>
-            <td>- 점</td>
-            <td>- 개</td>
+            <td>49,876 위</td>
+            <td>1245 점</td>
+            <td>81 개</td>
         </tr>
         <tr align=center>
             <td>2024.02.25</td>
@@ -111,8 +111,8 @@
                 <td>14<br>2️⃣3️⃣</td>
                 <td>15<br>6️⃣</td>
                 <td>16<br>4️⃣</td>
-                <td>17<br>0️⃣</td>
-                <td>0개<br>⬜</td>
+                <td>17<br>1️⃣</td>
+                <td>42개<br>🟩</td>
             </tr>
             <tr align=center>
                 <td>날짜<br>달성</td>
