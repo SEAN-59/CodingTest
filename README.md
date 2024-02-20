@@ -1,4 +1,5 @@
 <div align=center>
+<h1>CHALLENGE : <i>10 TEST / 1 WEEK</i> </h1>
 
 <p>
     <table>
@@ -117,8 +118,8 @@
             <tr align=center>
                 <td>날짜<br>달성</td>
                 <td>18<br>0️⃣</td>
-                <td>19<br>0️⃣</td>
-                <td>20<br>0️⃣</td>
+                <td>19<br>2️⃣</td>
+                <td>20<br>2️⃣</td>
                 <td>21<br>0️⃣</td>
                 <td>22<br>0️⃣</td>
                 <td>23<br>0️⃣</td>
