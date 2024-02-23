@@ -17,7 +17,7 @@ import Foundation
  카카오, 신입 공채.. "코딩 실력만 본다"
  카카오 "코딩 능력만으로 2018 신입 개발자 뽑는다"
  
- 기사의 제목을 기준으로 "블라인드 전형"에 주목하는 기사와 "코딩 테스트"에 주목하는 기사로 나뉘는 걸 발견했다. 
+ 기사의 제목을 기준으로 "블라인드 전형"에 주목하는 기사와 "코딩 테스트"에 주목하는 기사로 나뉘는 걸 발견했다.
  튜브는 이들을 각각 묶어서 보여주면 카카오 공채 관련 기사를 찾아보는 사용자에게 유용할 듯싶었다.
 
  유사한 기사를 묶는 기준을 정하기 위해서 논문과 자료를 조사하던 튜브는 "자카드 유사도"라는 방법을 찾아냈다.
@@ -57,26 +57,30 @@ import Foundation
  e ae be ce de -
  
  a,b,c,d / a,b,e,f = a,b,c,d,e,f / a,b
+ 7,9,10,11
 */
 func solution(_ str1:String, _ str2:String) -> Int {
-    var short: [String] = [], long: [String] = []
+    var result = 0
+    var short = [String](), long = [String](), sum = [String](), ins = [String]()
+
     var group = ([String](),[String]())
     var value = (1.0,1.0)
     
-    let returnChar = { (_ c: Character) -> String in
+    let returnStr = { (_ c: Character) -> String in
         if let code = Int("\(UnicodeScalar("\(c)".uppercased())!.value)"), 65...90 ~= code { return "\(c)".uppercased() }
         return ""
     }
     
+    let returnInt = { (_ arr: [String], _ s: String) -> Int in return (arr.filter { $0 == s }).count }
+    
     if str1.count > str2.count {
-        long = str1.map { returnChar($0) }
-        short = str2.map { returnChar($0) }
+        long = str1.map { returnStr($0) }
+        short = str2.map { returnStr($0) }
     }
     else {
-        long = str2.map { returnChar($0) }
-        short = str1.map { returnChar($0) }
+        long = str2.map { returnStr($0) }
+        short = str1.map { returnStr($0) }
     }
-    
 
     for i in 0 ..< long.count-1 {
         if i+1 < short.count {
@@ -85,10 +89,9 @@ func solution(_ str1:String, _ str2:String) -> Int {
         if !(long[i] == "" || long[i+1] == "") {group.1.append("\(long[i])\(long[i+1])")}
     }
     
-//    
-//    let sum = Set(group.0+group.1).count
-//    let insert = (group.0+group.1).count - sum
-//    
+    // 여기까지 그룹을 하는데 까지는 끝!
+    if group.0.isEmpty && group.1.isEmpty { return 65536 }
+    
     if group.0.count > group.1.count {
         long = group.0
         short = group.1
@@ -98,39 +101,88 @@ func solution(_ str1:String, _ str2:String) -> Int {
         short = group.0
     }
     
-    for i in  0..<long.count {
-        if i < short.count {
-            if short.contains(long[i]) { value.1 += 1 }
-        } else {
-            if long.contains(short[i]) { value.1 += 1 }
+    sum = long
+
+    for i in short {
+        if !sum.contains(i) { 
+            sum.append(i) }
+        else {
+            if !ins.contains(i) {
+                ins.append(i)
+            }
+            else {
+                if returnInt(sum, i) > returnInt(ins, i) { ins.append(i) }
+                else {sum.append(i)}
+            }
         }
     }
-    
-    
-    
-    print(short, long)
-    print(group)
-//    print(sum, insert)
-    
-    
 
+    print("after")
+    print(short, long)
+    print("sum: \(sum) \(sum.count)")
+    print("ins: \(ins)")
+    return Int((Double(ins.count) / Double(sum.count))*65536.0)
+    
 }
 
-//print("A = \(solution("{{2},{2,1},{2,1,3},{2,1,3,4}}"))")
+
 print("A = \(solution("FRANCE","french"))")
 print("A = \(solution("handshake", "shake hands"))")
 print("A = \(solution("aa1+aa2", "AAAA12"))")
 print("A = \(solution("E=M*C^2", "e=m*c^2"))")
-print("A = \(solution("aaabbcccccccc","aaaabbcccc"))")
-
+print("A = \(solution("aaabbcccccccc", "aaaabbcccc"))") // 40329
+print("A = \(solution("AAbbaa_AAbb","BBB"))")//16384
+print("A = \(solution("abab","baba"))")//32768
+print("A = \(solution("abc","abbb"))")//16384
+/*
+//A = [1,1,2]
+//B = [1,2,3]
+ 
+ SUM 1 1 2
+ INS 1 2
+ 
+ No.    A        B        AuB        AnB
+ 0    1,1,2    1,2,3,4    []    []
+ 1    1,1,2    1,2,3,4    [1,2,3,4]    []
+ 2    1,1    1,2,3,4    [1,2,3,4]    [2]
+ 3    1    1,2,3,4    [1,2,3,4]    [2,1]
+ 4        1,2,3,4    [1,2,3,4,1]    [2,1]
+ 
+ 0    1,3,5    1,2,3,4    []    []
+ 1    1,3,5    1,2,3,4    [1,2,3,4]    []
+ 2    1,3    1,2,3,4    [1,2,3,4,5]    []
+ 3    1    1,2,3,4    [1,2,3,4,5]    [3]
+ 4        1,2,3,4    [1,2,3,4,5]    [3,1]
+ 
+ 0    1,1,2,3    1,1,1,4,5    []    []
+ 1    1,1,2,3    1,1,1,4,5    [1,1,1,4,5]    []
+ 2    1,1,2    1,1,1,4,5    [1,1,1,4,5,3]    []
+ 3    1,1   1,1,1,4,5    [1,1,1,4,5,3,2]    []
+ 4    1    1,1,1,4,5    [1,1,1,4,5,3,2]    [1]
+ 5        1,1,1,4,5    [1,1,1,4,5,3,2]    [1] -> SUM 내부에 1의 개수 < INS 내부의 1의 개수 일떄 SUM에 APPEND else { INS에 append }
+ 
+*/
 
 /*
  [결과]
  정확성  테스트
+테스트 1 〉	통과 (0.18ms, 16.4MB)
+테스트 2 〉	통과 (0.20ms, 16.4MB)
+테스트 3 〉	통과 (1.00ms, 16.5MB)
+테스트 4 〉	통과 (139.79ms, 16.4MB)
+테스트 5 〉	통과 (0.28ms, 16.6MB)
+테스트 6 〉	통과 (0.29ms, 16.5MB)
+테스트 7 〉	실패 (0.69ms, 16.7MB)
+테스트 8 〉	통과 (0.18ms, 16.6MB)
+테스트 9 〉	실패 (1.01ms, 16.4MB)
+테스트 10 〉	실패 (1.42ms, 16.5MB)
+테스트 11 〉	실패 (1.59ms, 16.5MB)
+테스트 12 〉	통과 (0.10ms, 16.6MB)
+테스트 13 〉	통과 (0.68ms, 16.6MB)
  
  */
 
 /*
  [해설]
- 코테에서 타입 관련된 변환은 유연하지 못하니 String은 String, Character은 Character 으로 변환 되게 해야힘
+ 이해가 안되네 반례고 뭐고 다 되는데 7,9,10,11 통과가 안되네..
  */

@@ -68,46 +68,58 @@ func solution(_ n:Int, _ k:Int) -> Int {
                 n = 0
             }
         }
-        
         return result
     }
     
     let checkPrime = { (_ str: String, _ k:Int) -> Bool in
-        if str == "2" { return true}
-        var value = Int(str)!
-        let sqr = Int(sqrt(Double(value)))
+        let value = Int64(str)!
+        if value <= 3 { return true }
+        let sqr = Int64(sqrt(Double(value)))
         
         for i in 2 ... sqr {
-            if value / i == 0 { return false }
+            if value % i == 0 { return false }
         }
         return true
     }
-    
     makeDigit(n,k).forEach {
-        if $0 != "0" { strNum += "\($0)"}
+        var value = Int("\($0)")!
+        if value != 0 { strNum += "\($0)"}
         else if strNum != "" {
             if strNum != "1" {
                 if checkPrime(strNum,k) { count+=1 }
             }
             strNum = ""
         }
-
     }
-    
-    if strNum != "1" { if checkPrime(strNum,k) { count+=1 } }
-    
+    if strNum != "1" && strNum != "" && strNum != "0" { if checkPrime(strNum,k) { count+=1 } }
     return count
 }
 
 //print("A = \(solution(437673, 3))")
 //print("A = \(solution(437674, 3))")
-print("A = \(solution(4, 10))")
+print("A = \(solution(12, 3))")
 
 
 
 /*
  [결과]
  정확성  테스트
+ 테스트 1 〉    통과 (14.59ms, 16.4MB)
+ 테스트 2 〉    통과 (0.08ms, 16.4MB)
+ 테스트 3 〉    통과 (0.07ms, 16.4MB)
+ 테스트 4 〉    통과 (0.06ms, 16.6MB)
+ 테스트 5 〉    통과 (0.07ms, 16.3MB)
+ 테스트 6 〉    통과 (0.07ms, 16.4MB)
+ 테스트 7 〉    통과 (0.07ms, 16.3MB)
+ 테스트 8 〉    통과 (0.04ms, 16.4MB)
+ 테스트 9 〉    통과 (0.06ms, 16.2MB)
+ 테스트 10 〉    통과 (0.05ms, 16.4MB)
+ 테스트 11 〉    통과 (0.07ms, 16.3MB)
+ 테스트 12 〉    통과 (0.07ms, 16.4MB)
+ 테스트 13 〉    통과 (0.06ms, 16.2MB)
+ 테스트 14 〉    통과 (0.05ms, 16.2MB)
+ 테스트 15 〉    통과 (0.05ms, 16.3MB)
+ 테스트 16 〉    통과 (0.05ms, 16.3MB)
  
  */
 
@@ -115,4 +127,3 @@ print("A = \(solution(4, 10))")
  [해설]
  이름 지정할때 미리 존재하는거로 지정하면 안될 가능성이 존재
  */
-
