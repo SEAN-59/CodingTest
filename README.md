@@ -27,6 +27,36 @@
         </tr>
         <tr align=center>
             <td>2024.02.25</td>
+            <td>33,729 위</td>
+            <td>1323 점</td>
+            <td>92 개</td>
+        </tr>
+        <tr align=center>
+            <td>2024.03.03</td>
+            <td>- 위</td>
+            <td>- 점</td>
+            <td>- 개</td>
+        </tr>
+        <tr align=center>
+            <td>2024.03.10</td>
+            <td>- 위</td>
+            <td>- 점</td>
+            <td>- 개</td>
+        </tr>
+        <tr align=center>
+            <td>2024.03.17</td>
+            <td>- 위</td>
+            <td>- 점</td>
+            <td>- 개</td>
+        </tr>
+        <tr align=center>
+            <td>2024.03.24</td>
+            <td>- 위</td>
+            <td>- 점</td>
+            <td>- 개</td>
+        </tr>
+        <tr align=center>
+            <td>2024.03.31</td>
             <td>- 위</td>
             <td>- 점</td>
             <td>- 개</td>
@@ -122,9 +152,9 @@
                 <td>20<br>2️⃣</td>
                 <td>21<br>4️⃣</td>
                 <td>22<br>0️⃣</td>
-                <td>23<br>0️⃣</td>
-                <td>24<br>0️⃣</td>
-                <td>0개<br>⬜</td>
+                <td>23<br>2️⃣</td>
+                <td>24<br>2️⃣</td>
+                <td>12개<br>🟩</td>
             </tr>
             <tr align=center>
                 <td>날짜<br>달성</td>
