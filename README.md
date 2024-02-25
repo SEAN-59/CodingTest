@@ -76,11 +76,6 @@
             <th width='200'>기간</th>
             <th width='200'>내용</th>
             <tr align=center>
-                <td>01</td>
-                <td>1 DAY</td>
-                <td>1문제 이상</td>
-            </tr>
-            <tr align=center>
                 <td>02</td>
                 <td>1 WEEK</td>
                 <td>10문제 이상</td>
@@ -158,14 +153,14 @@
             </tr>
             <tr align=center>
                 <td>날짜<br>달성</td>
-                <td>25<br>0️⃣</td>
+                <td>25<br>1️⃣</td>
                 <td>26<br>0️⃣</td>
                 <td>27<br>0️⃣</td>
                 <td>28<br>0️⃣</td>
                 <td>29<br>0️⃣</td>
                 <td>-<br>-</td>
                 <td>-<br>-</td>
-                <td>0개<br>⬜</td>
+                <td>0개<br>⬛️</td>
             </tr>
         </table>
     </p>
