@@ -154,8 +154,8 @@
             <tr align=center>
                 <td>날짜<br>달성</td>
                 <td>25<br>1️⃣</td>
-                <td>26<br>0️⃣</td>
-                <td>27<br>0️⃣</td>
+                <td>26<br>1️⃣</td>
+                <td>27<br>1️⃣</td>
                 <td>28<br>0️⃣</td>
                 <td>29<br>0️⃣</td>
                 <td>-<br>-</td>
